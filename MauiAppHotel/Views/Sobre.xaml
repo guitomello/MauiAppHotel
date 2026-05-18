@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                     Padding="10"
+                     Spacing="10">
+        <Label 
+        Text="Sobre o Projeto"
+        FontFamily="KalamRegular"
+        FontSize="50"
+        HorizontalOptions="Center"
+        TextColor="{StaticResource Primary}"/>
+
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource OffBlack}"
+               BorderColor="{StaticResource Gray600}">
+            <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Text="Intuito:" FontAttributes="Bold"/>
+                    <Label Text="Fazer o cáculo da diária dos clientes de um hotel" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Text="Feito por:" FontAttributes="Bold"/>
+                    <Label Text="Guilherme Pereira Mello" />
+                    
+                </VerticalStackLayout>
+
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Text="Módulo do Curso de Desenvolvimento de Sistemas:" FontAttributes="Bold"/>
+                    <Label Text="DS II (2º Módulo)" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Text="Ano de Desenvolvimento:" FontAttributes="Bold"/>
+                    <Label Text="2026" />
+                </VerticalStackLayout>
+
+                <Button x:Name="btn_voltar"
+                        Text="Voltar"
+                        Clicked="btn_voltar_Clicked"/>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

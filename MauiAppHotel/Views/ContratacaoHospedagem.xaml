@@ -21,7 +21,7 @@
                BackgroundColor="{StaticResource OffBlack}"
                BorderColor="{StaticResource Gray600}"
                >
-            <VerticalStackLayout>
+            <VerticalStackLayout Spacing="10">
                 <Grid RowDefinitions="Auto, Auto" 
                       ColumnDefinitions="*, *, 2*">
                     <Label Grid.Row="0" 
@@ -90,6 +90,10 @@
                 
                 <Button x:Name="btn_avancar"
                         Text="Avançar"/>
+
+                <Button x:Name="btn_sobre"
+                        Text="Sobre o Projeto"
+                        Clicked="btn_sobre_Clicked"/>
             </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>
