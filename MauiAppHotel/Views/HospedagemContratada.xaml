@@ -2,11 +2,64 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.HospedagemContratada"
-             Title="HospedagemContratada">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             NavigationPage.HasNavigationBar="False"
+             Title="HospedagemContratada"
+             BackgroundColor="{StaticResource Gray950}">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10"
+                         Spacing="10">
+        <Label Text="Suíte Super Luxo" 
+               FontFamily="KalamRegular"
+               FontSize="50"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource Primary}"/>
+
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource OffBlack}"
+               BorderColor="{StaticResource Gray600}">
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <HorizontalStackLayout>
+                    <Label Text="Adultos:" />
+                    <Label Text="2"
+                           TextColor="{StaticResource Primary}"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label Text="Crianças:" />
+                    <Label Text="2"
+                           TextColor="{StaticResource Primary}"/>
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource OffBlack}"
+               BorderColor="{StaticResource Gray600}">
+            <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*" HorizontalOptions="Center" ColumnSpacing="40">
+                <Label Text="Check-In:" Grid.Column="0" Grid.Row="0"/>
+                <Label Text="Check-Out:" Grid.Column="1" Grid.Row="0"/>
+                <Label Text="Estadia:" Grid.Column="2" Grid.Row="0"/>
+
+                <Label Text="XX/XX/XXXX" Grid.Column="0" Grid.Row="1"/>
+                <Label Text="XX/XX/XXXX" Grid.Column="1" Grid.Row="1"/>
+                <Label Text="XX/XX/XXXX" Grid.Column="2" Grid.Row="1"/>
+            </Grid>
+        </Frame>
+
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource OffBlack}"
+               BorderColor="{StaticResource Gray600}">
+            <HorizontalStackLayout HorizontalOptions="Center"
+                                   Spacing="10">
+                <Label Text="Valor Total:" />
+                <Label Text="R$ XXX,XX" 
+                       TextColor="{StaticResource Primary}"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Button x:Name="btn_voltar"
+                Text="Voltar"
+                Clicked="btn_voltar_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
